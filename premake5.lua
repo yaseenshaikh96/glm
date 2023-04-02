@@ -6,7 +6,6 @@ project "glm"
 	files
 	{
 		"glm/**.hpp",
-		"glm/**.cpp",
 		"glm/**.inl"
 	}
 
@@ -21,4 +20,4 @@ project "glm"
 	filter "configurations:Dist"
 		runtime "Release"
 		optimize "on"
-        symbols "off"
+        	symbols "off"
