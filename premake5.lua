@@ -2,18 +2,22 @@ project "glm"
 	kind "StaticLib"
 	language "C++"
 	cppdialect "C++20"
+		
+	
+	targetdir ( "%{wks.location}/bin/" .. outputdir .. "/%{prj.name}")
+	objdir ( "%{wks.location}/bin-int/" .. outputdir .. "/%{prj.name}")		
 
 	files
 	{
-		"glm/**.hpp",
-		"glm/**.inl"
+		"include/**.hpp",
+		"include/**.inl",
+		"src/**.cpp"
 	}
 
-	includeDirs
+	includedirs
 	{
-		"glm/**.hpp",
-		"glm/**.inl",
-		"glm/**.cpp"
+		"src",
+		"include"
 	}	
 
 	defines
