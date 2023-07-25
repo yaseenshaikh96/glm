@@ -1,5 +1,5 @@
 project "glm"
-	kind "None"
+	kind "StaticLib"
 	language "C++"
 	cppdialect "C++20"
 
@@ -9,6 +9,19 @@ project "glm"
 		"glm/**.inl"
 	}
 
+	includeDirs
+	{
+		"glm/**.hpp",
+		"glm/**.inl",
+		"glm/**.cpp"
+	}	
+
+	defines
+	{
+		"GLM_ENABLE_EXPERIMENTAL"
+	}	
+	
+	
 	filter "configurations:Debug"
 		runtime "Debug"
 		symbols "on"

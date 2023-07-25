@@ -2,6 +2,7 @@
 **.vcxproj
 **.vcxproj.filters
 
+.vs/
 
 # Compiled Object files
 *.slo
