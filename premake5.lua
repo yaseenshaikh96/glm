@@ -4,8 +4,8 @@ project "glm"
 	cppdialect "C++20"
 		
 	
-    	targetdir ( "%{wks.location}/bin/" .. outputdir)
-    	objdir ( "%{wks.location}/bin-int/" .. outputdir)
+    	targetdir ( "%{wks.location}/bin/%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}")
+    	objdir ( "%{wks.location}/bin-int/%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}")
 	
 
 	files
